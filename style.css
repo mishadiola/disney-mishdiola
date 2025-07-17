@@ -1,0 +1,284 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("assets/fonts/poppins/Poppins-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mali";
+  src: url("assets/fonts/mali/Mali-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  cursor: url("assets/curs/Normal\ Select.cur"), auto;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Mali", cursive;
+}
+
+/* Navigation Bar */
+.navbar {
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 3px solid black;
+  border-radius: 20px;
+  padding: 10px 20px;
+  background-color: white;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-logo img {
+  height: 40px;
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  margin-left: 15px;
+  transition: color 0.3s;
+}
+
+.navbar-menu a:hover {
+  color: rgb(255, 230, 0);
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-menu {
+    margin-top: 10px;
+  }
+
+  .navbar-menu a {
+    margin-left: 0;
+    margin-right: 15px;
+    display: inline-block;
+  }
+}
+
+/* Welcome Section */
+.welcome-section {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 100px 20px 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90%;
+}
+
+.welcome-gif {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Start Butn */
+.start-btn {
+  text-decoration: none;
+  padding: 12px 30px;
+  background-color: #ffcc00;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+  box-shadow: 0 4px 0 #d6b100;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-family: "Mali", cursive;
+  cursor: url("assets/curs/Alternate\ Select.cur"), pointer;
+}
+
+.start-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 #bfa000;
+}
+
+@media (max-width: 600px) {
+  .start-btn {
+    font-size: 1rem;
+    padding: 10px 24px;
+  }
+}
+.intro-section {
+  background: linear-gradient(135deg, #f84b4b, #ffee58);
+  padding: 40px 20px;
+}
+
+.intro-box {
+  background-color: white;
+  border: 3px solid black;
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  box-shadow: 4px 4px 0 #000;
+  flex-wrap: wrap;
+}
+
+.intro-image img {
+  width: 300px;
+  max-width: 100%;
+}
+
+.intro-text {
+  margin-left: 40px;
+  max-width: 500px;
+}
+
+.intro-text h1 {
+  font-family: "Mali", cursive;
+  font-size: 2.5rem;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.highlight-red {
+  color: #e60000;
+}
+
+.intro-text p {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .intro-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .intro-text {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .intro-text h1 {
+    font-size: 2rem;
+  }
+}
+
+/* --- Generate Section --- */
+.generate-section {
+  background-color: #fff;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.generate-box {
+  background: radial-gradient(circle, #ffffff, #a0d4ff);
+  border: 3px solid black;
+  border-radius: 15px;
+  padding: 30px 40px;
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 6px 6px 0 #000;
+}
+
+.generate-title {
+  font-family: "Mali", cursive;
+  font-size: 1.8rem;
+  color: #0099ff;
+  text-shadow: 1px 1px 1px #000;
+  margin-bottom: 10px;
+}
+
+.generate-subtitle {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Image */
+.generate-img {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  height: 250px;
+  object-fit: contain;
+}
+
+.yellow-btn {
+  background-color: #ffcc00;
+  border: 2px solid black;
+  padding: 10px 25px;
+  font-family: "Mali", cursive;
+  font-size: 1rem;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: 0.2s ease;
+  cursor: url("assets/curs/Alternate\ Select.cur"), pointer;
+}
+
+.generate-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 0 #bfa000;
+}
+
+.generate-description {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+@media (max-width: 600px) {
+  .generate-box {
+    padding: 20px;
+  }
+
+  .generate-title {
+    font-size: 1.5rem;
+  }
+
+  .generate-img {
+    max-width: 90%;
+  }
+
+  .generate-btn {
+    font-size: 0.9rem;
+    padding: 8px 20px;
+  }
+}

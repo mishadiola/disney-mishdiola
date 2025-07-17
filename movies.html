@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Disney Movies</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="style3.css" />
+    <script src="script.js" defer></script>
+    <script src="script2.js" defer></script>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+  </head>
+
+  <body>
+    <!-- MOVIES SECTION -->
+    <section id="films" class="characters-section">
+      <div class="disney-title-image">
+        <img src="assets/images/movies-title.png" alt="Movies Title" />
+      </div>
+
+      <div class="search-bar">
+        <input
+          type="text"
+          id="movieSearch"
+          placeholder="Search for a movie or character..."
+          oninput="searchMovies()"
+        />
+      </div>
+
+      <div class="characters-container" id="moviesContainer">
+        <!-- Movie cards here -->
+      </div>
+
+      <!-- LoadMore Button -->
+      <br />
+      <div class="load-more-container">
+        <button
+          class="yellow-btn"
+          id="loadMoreMoviesBtn"
+          onclick="loadMoreMovies()"
+        >
+          Load More
+        </button>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p class="footer-text">
+          This site was built as a bootcamp project to explore Disney character
+          data, movies, attractions, and more.
+        </p>
+
+        <p class="footer-text">
+          <strong>APIs/Embeds used:</strong> Disney API, Spotify Embed, Google
+          Maps
+        </p>
+        <p class="footer-text">
+          <strong>Created by:</strong> Mish D. • July 2025
+        </p>
+        <p class="footer-text">&copy; 2025 Mish D. All rights reserved.</p>
+
+        <div class="socials">
+          <a href="mailto:diolamisha07@gmail.com" target="_blank">• Email</a>
+          <a href="https://www.instagram.com/amoremisha" target="_blank"
+            >• Instagram</a
+          >
+          <a href="https://www.facebook.com/mishdiola" target="_blank"
+            >• Facebook</a
+          >
+          <a href="blog.html" target="_blank">• Blog</a>
+        </div>
+
+        <button
+          class="yellow-btn back-to-top"
+          onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+        >
+          ↑ Back to Top
+        </button>
+      </div>
+    </footer>
+  </body>
+</html>

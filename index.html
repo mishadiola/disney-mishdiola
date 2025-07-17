@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Disney Experience!</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="style3.css" />
+    <script src="script.js" defer></script>
+    <script src="script2.js" defer></script>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+  </head>
+
+  <body>
+    <header class="navbar">
+      <div class="navbar-logo">
+        <a href="index.html">
+          <img src="assets/images/logo.png" alt="Disney Logo" />
+        </a>
+      </div>
+
+      <nav class="navbar-menu">
+        <a href="#characters">Characters</a> | <a href="#films">Movies</a> |
+        <a href="#music">Music</a> |
+      </nav>
+    </header>
+
+    <section class="welcome-section">
+      <div class="content">
+        <img
+          src="assets/images/disney-header.gif"
+          alt="Disney Intro"
+          class="welcome-gif"
+        />
+        <a class="start-btn" href="#intro-section">START</a>
+      </div>
+    </section>
+
+    <section class="intro-section" id="intro-section">
+      <div class="intro-box">
+        <div class="intro-image">
+          <img src="assets/images/mickey.gif" alt="Mickey Mouse" />
+        </div>
+        <div class="intro-text">
+          <p><b>Greetings! Welcome to the</b></p>
+          <div class="disney-title-image">
+            <img
+              src="assets/images/disneyexperiencetitle.png"
+              alt="Disney Experience Title"
+            />
+          </div>
+          <p class="paragraph">
+            <b>
+              Your one-stop place for all things Disney! From beloved characters
+              and classic movies to fun quizzes and songs, there’s something
+              here for every Disney fan. Let the magic begin!
+            </b>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="generate-section">
+      <div class="generate-box">
+        <h1 class="generate-title">Which Disney Film should I watch today?</h1>
+        <p class="generate-subtitle">Not sure what to watch?</p>
+
+        <img
+          src="assets/images/DisneyMovieIntro.gif"
+          alt="Disney Movie Placeholder"
+          class="generate-img"
+          id="film-image"
+        />
+
+        <br />
+        <button class="yellow-btn" onclick="generateFilm()">
+          Generate Film
+        </button>
+
+        <p class="generate-description" id="film-description">
+          Let us help you pick the perfect Disney movie for your mood!
+        </p>
+      </div>
+    </section>
+
+    <section class="quiz-section">
+      <h2 class="quiz-title">Which Disney Character Are You?</h2>
+      <p class="quiz-subtitle">Which Disney Character Are You?</p>
+      <img
+        src="assets/images/DisneyCharactersImage.gif"
+        alt="Quiz Image"
+        class="quiz-image"
+      />
+      <br />
+      <button class="yellow-btn" onclick="openModal()">Take Quiz</button>
+
+      <div class="slideshow-row">
+        <div class="slideshow-box">
+          <img id="slide-img-1" src="" alt="Character 1" />
+          <div class="caption">
+            <p id="slide-name-1"></p>
+            <p id="slide-film-1"></p>
+          </div>
+        </div>
+
+        <div class="slideshow-box">
+          <img id="slide-img-2" src="" alt="Character 2" />
+          <div class="caption">
+            <p id="slide-name-2"></p>
+            <p id="slide-film-2"></p>
+          </div>
+        </div>
+
+        <div class="slideshow-box">
+          <img id="slide-img-3" src="" alt="Character 3" />
+          <div class="caption">
+            <p id="slide-name-3"></p>
+            <p id="slide-film-3"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODAL -->
+    <div id="quizModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div id="quiz">
+          <div class="question" id="questionText">
+            Question will appear here
+          </div>
+          <div class="choices" id="choicesContainer"></div>
+          <button onclick="nextQuestion()" id="nextBtn">Next</button>
+
+          <img
+            id="resultImage"
+            src=""
+            alt=""
+            class="quiz-result-img"
+            style="display: none; max-width: 200px; margin-top: 20px"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="disney-title-image">
+      <img src="assets/images/exploremore.png" alt="Explore More Title" />
+    </div>
+
+    <section class="characters-films-section">
+      <a href="characters.html" class="card" id="characters" target="_blank">
+        <div class="label red">Characters</div>
+        <img src="assets/images/characters.png" alt="Characters Image" />
+      </a>
+
+      <a href="movies.html" class="card" id="films" target="_blank">
+        <div class="label yellow">Movies</div>
+        <img src="assets/images/movies.png" alt="Movies Image" />
+      </a>
+    </section>
+    <hr />
+    <div class="disney-title-image">
+      <img src="assets/images/disneyplaylisttitle.png" alt="Disney Playlist" />
+    </div>
+
+    <section id="music" class="music-section music-bg">
+      <div class="music-container">
+        <div class="music-box">
+          <iframe
+            src="https://open.spotify.com/embed/playlist/6OJBQs9vWu8K8QFQlGm877?utm_source=generator"
+            width="100%"
+            height="352"
+            frameborder="0"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <br />
+    <hr />
+    <div class="disney-title-image">
+      <img src="assets/images/disneyparktitle.png" alt="Disney Park Explorer" />
+    </div>
+
+    <div class="disney-map-wrapper">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!4v1752034471005!6m8!1m7!1skhox0HJKEKyM_MimnvjAQg!2m2!1d28.41894237171033!2d-81.58120662712264!3f1.7900140470192127!4f9.337409640033144!5f0.7820865974627469"
+        width="100%"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+      <div class="map-location-label">📍 Disneyland Florida</div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p class="footer-text">
+          This site was built as a bootcamp project to explore Disney character
+          data, movies, attractions, and more.
+        </p>
+
+        <p class="footer-text">
+          <strong>APIs/Embeds used:</strong> Disney API, Spotify Embed, Google
+          Maps
+        </p>
+        <p class="footer-text">
+          <strong>Created by:</strong> Mish D. • July 2025
+        </p>
+        <p class="footer-text">&copy; 2025 Mish D. All rights reserved.</p>
+
+        <div class="socials">
+          <a href="mailto:diolamisha07@gmail.com" target="_blank">• Email</a>
+          <a href="https://www.instagram.com/amoremisha" target="_blank"
+            >• Instagram</a
+          >
+          <a href="https://www.facebook.com/mishdiola" target="_blank"
+            >• Facebook</a
+          >
+          <a href="blog.html" target="_blank">• Blog</a>
+        </div>
+
+        <button
+          class="yellow-btn back-to-top"
+          onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+        >
+          ↑ Back to Top
+        </button>
+      </div>
+    </footer>
+  </body>
+</html>
