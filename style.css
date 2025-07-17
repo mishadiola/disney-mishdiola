@@ -1,13 +1,13 @@
 @font-face {
   font-family: "Poppins";
-  src: url("assets/fonts/poppins/Poppins-Regular.ttf") format("truetype");
+  src: url("assets/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Mali";
-  src: url("assets/fonts/mali/Mali-Regular.ttf") format("truetype");
+  src: url("assets/fonts/Mali/Mali-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
